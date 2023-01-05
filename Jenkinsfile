@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "-=- Checkout project -=-"
-                git url: 'https://github.com/babsmbaye18/Spring-Boot-Hello-World-Example.git'
+                git url: 'https://github.com/jgrisel/Spring-Boot-Hello-World-Example.git'
             }
         }
         
@@ -109,7 +109,7 @@ pipeline {
        stage('Checkout Selenium') {
             steps {
                 echo "-=- Checkout project -=-"
-                git url: 'https://github.com/zaba221/example-springboot-automation-test-selenium.git'
+                git url: 'https://github.com/jgrisel/example-springboot-automation-test-selenium.git'
             }
         }
         
