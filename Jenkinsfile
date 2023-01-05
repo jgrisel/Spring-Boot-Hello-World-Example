@@ -115,7 +115,17 @@ pipeline {
         
         stage('Selenium Test Job') {
             steps {
-                 build job: 'job-selenium' 
+                 sh 'chmod +x driver/chromedriver.exe'
+                 sh 'mvn clean verify surefire-report:report-only'
+                
+                publishHTML target: [
+            allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            keepAll: true,
+            reportDir: 'coverage',
+            reportFiles: 'surefire-report.html',
+            reportName: 'RCov Report'
+          ]
             }
         }
     }
