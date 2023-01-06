@@ -124,7 +124,7 @@ pipeline {
             keepAll: true,
             reportDir: 'target/site',
             reportFiles: 'surefire-report.html',
-            reportName: 'Automation Tests Report'
+            reportName: 'Automation Test Report'
           ]
             }
         }
